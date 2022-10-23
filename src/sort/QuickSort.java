@@ -1,7 +1,5 @@
 package sort;
 
-import com.sun.istack.internal.NotNull;
-
 import java.util.Arrays;
 
 /**
@@ -18,30 +16,41 @@ public class QuickSort {
     static int[] arr1 = {5, 7, 6};
     static int[] arr2 = {7, 5, 6};
     static int[] arr3 = {7, 5};
-    static int[] arr4 = {5, 6};
+    static int[] arr4 = {1, 2, 3, 4, 5};
+    static int[] arr5 = {5, 4, 3, 2, 1};
 
     public static void main(String[] args) {
-        rearrange(arr);
+        quickSort(arr);
+        quickSort(arr1);
+        quickSort(arr2);
+        quickSort(arr3);
+        quickSort(arr4);
+        quickSort(arr5);
+/*
+        rearrange(arr, 0, 4);
         System.out.println(Arrays.toString(arr));
-        rearrange(arr1);
+        rearrange(arr1, 0, arr1.length - 1);
         System.out.println(Arrays.toString(arr1));
-        rearrange(arr2);
+        rearrange(arr2, 0, arr2.length - 1);
         System.out.println(Arrays.toString(arr2));
-        rearrange(arr3);
+        rearrange(arr3, 0, arr3.length - 1);
         System.out.println(Arrays.toString(arr3));
-        rearrange(arr4);
+        rearrange(arr4, 0, arr4.length - 1);
         System.out.println(Arrays.toString(arr4));
+*/
+        //quickSort(arr);
     }
 
-    public static int rearrange(int[] arr) {
-        if (arr.length == 1) {
-            return 0;
+    public static void rearrange(int[] arr, int start, int end) {
+        if (start >= end) {
+            return;
         }
-        int length = arr.length;
+
+        int length = (end - start) + 1;
         int pivot = arr[length - 1];
         int highIdx = -1;
 
-        for (int i = 0; i <= length - 2; i++) {
+        for (int i = start; i <= length - 2; i++) {
             if (arr[i] > pivot && highIdx == -1) {
                 highIdx = i;
             }
@@ -56,13 +65,17 @@ public class QuickSort {
         if (highIdx > -1) {
             arr[length - 1] = arr[highIdx];
             arr[highIdx] = pivot;
+        } else {
+            return;
         }
 
-        return highIdx;
+        rearrange(arr, start, highIdx - 1);
+        rearrange(arr, highIdx + 1, end);
     }
 
     public static void quickSort(int[] arr) {
-        //rearrange(arr);
+        rearrange(arr, 0, arr.length - 1);
+        System.out.println(Arrays.toString(arr));
     }
 
 }
