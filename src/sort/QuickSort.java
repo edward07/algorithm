@@ -21,12 +21,13 @@ public class QuickSort {
 
     public static void main(String[] args) {
         quickSort(arr);
-        quickSort(arr1);
+
+/*      quickSort(arr1);
         quickSort(arr2);
         quickSort(arr3);
         quickSort(arr4);
         quickSort(arr5);
-/*
+
         rearrange(arr, 0, 4);
         System.out.println(Arrays.toString(arr));
         rearrange(arr1, 0, arr1.length - 1);
@@ -46,11 +47,10 @@ public class QuickSort {
             return;
         }
 
-        int length = (end - start) + 1;
-        int pivot = arr[length - 1];
+        int pivot = arr[end];
         int highIdx = -1;
 
-        for (int i = start; i <= length - 2; i++) {
+        for (int i = start; i <= end - 1; i++) {
             if (arr[i] > pivot && highIdx == -1) {
                 highIdx = i;
             }
@@ -63,10 +63,10 @@ public class QuickSort {
         }
 
         if (highIdx > -1) {
-            arr[length - 1] = arr[highIdx];
+            arr[end] = arr[highIdx];
             arr[highIdx] = pivot;
         } else {
-            return;
+            highIdx = end;
         }
 
         rearrange(arr, start, highIdx - 1);
