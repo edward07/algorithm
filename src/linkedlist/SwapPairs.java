@@ -34,6 +34,24 @@ public class SwapPairs {
         return result;
     }
 
+    /**
+     *  有点松散列表的感觉
+     */
+    public ListNode swapPairsRecursive(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode result = swapPairsRecursive(head.next.next);
+        ListNode next = head.next;
+
+        next.next = head;
+        head.next = result;
+
+        return next;
+    }
+
+
 
     public static void main(String[] args) {
         ListNode n1 = new ListNode(1);
@@ -48,7 +66,7 @@ public class SwapPairs {
 
         System.out.println(n1);
         SwapPairs linkedList = new SwapPairs();
-        ListNode result = linkedList.swapPairs(n1);
+        ListNode result = linkedList.swapPairsRecursive(n1);
         System.out.println(result);
 
     }
