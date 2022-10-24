@@ -1,7 +1,5 @@
 package linkedlist;
 
-import java.util.List;
-
 public class ReverseLinkedList {
 
     private ListNode lastNode;
@@ -40,22 +38,5 @@ public class ReverseLinkedList {
         linkedList.reverseList(n1);
         System.out.println(linkedList.lastNode);
 
-    }
-}
-
-
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-    @Override
-    public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
     }
 }
