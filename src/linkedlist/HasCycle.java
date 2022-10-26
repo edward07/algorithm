@@ -5,43 +5,26 @@ package linkedlist;
  */
 public class HasCycle {
 
-    private ListNode globalFirstNode;
-
     public boolean hasCycle(ListNode head) {
-        if (globalFirstNode == null) {
-            globalFirstNode = head;
-        }
-
         if (head == null || head.next == null) {
             return false;
         }
 
-        ListNode next = globalFirstNode.next;
-        while (next != null) {
-            ListNode result = checkCycle(globalFirstNode, next);
-            if (result != null) {
+        ListNode slow = head;
+        ListNode fast = head.next;
+
+        while (fast != null && slow != null) {
+            if (fast == slow) {
                 return true;
             }
-            next = next.next;
+            slow = slow.next;
+            if (fast.next == null) {
+                return false;
+            }
+            fast = fast.next.next;
         }
 
         return false;
-    }
-
-    public ListNode checkCycle(ListNode globalHeadNode, ListNode curr) {
-        if (globalHeadNode == null || curr == null) {
-            return null;
-        }
-
-        ListNode currGlobalNode = globalHeadNode;
-        while (currGlobalNode != null && currGlobalNode != curr) {
-            if (curr.next == currGlobalNode) {
-                return currGlobalNode;
-            }
-            currGlobalNode = currGlobalNode.next;
-        }
-
-        return null;
     }
 
     public static void main(String[] args) {
