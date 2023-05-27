@@ -45,7 +45,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -157,7 +157,7 @@
       <workItem from="1675515344546" duration="350000" />
       <workItem from="1682002246575" duration="15913000" />
       <workItem from="1685166350040" duration="3753000" />
-      <workItem from="1685176775355" duration="1772000" />
+      <workItem from="1685176775355" duration="2157000" />
     </task>
     <servers />
   </component>
