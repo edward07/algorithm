@@ -4,11 +4,18 @@ import java.util.Stack;
 
 public class MyQueue {
 
-    private Stack<Integer> s1 = new Stack<>();
-    private Stack<Integer> s2 = new Stack<>();
+    private Stack<Integer> inStack = new Stack<>();
+    private Stack<Integer> outStack = new Stack<>();
 
     public static void main(String[] args) {
+        MyQueue myQueue = new MyQueue();
+        myQueue.push(1);
+        myQueue.push(2);
+        myQueue.push(3);
 
+        System.out.println(myQueue.pop());
+        System.out.println(myQueue.pop());
+        System.out.println(myQueue.pop());
     }
 
     public MyQueue() {
@@ -16,33 +23,29 @@ public class MyQueue {
     }
 
     public void push(int x) {
-        s1.push(x);
+        inStack.push(x);
     }
 
     public int pop() {
-        while (!s1.isEmpty()) {
-            s2.push(s1.pop());
+        if (outStack.isEmpty()) {
+            while (!inStack.isEmpty()) {
+                outStack.push(inStack.pop());
+            }
         }
-        Integer result = s2.pop();
-        while (!s2.isEmpty()) {
-            s1.push(s2.pop());
-        }
-        return result;
+        return outStack.pop();
     }
 
     public int peek() {
-        while (!s1.isEmpty()) {
-            s2.push(s1.pop());
+        if (outStack.isEmpty()) {
+            while (!inStack.isEmpty()) {
+                outStack.push(inStack.pop());
+            }
         }
-        Integer result = s2.peek();
-        while (!s2.isEmpty()) {
-            s1.push(s2.pop());
-        }
-        return result;
+        return outStack.peek();
     }
 
     public boolean empty() {
-        return s1.isEmpty();
+        return inStack.isEmpty() && outStack.isEmpty();
     }
 
 }
