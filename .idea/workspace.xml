@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7306fd9d-fcb3-48ca-8f44-89f7c39fe864" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/linkedlist/HasCycle02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/linkedlist/ReverseList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stack/CheckBracePair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stack/MyQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stack/MyStack2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/linkedlist/ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/linkedlist/ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/stack/IsValid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/stack/IsValid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkedlist/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/ListNode.java" afterDir="false" />
-    </list>
+    <list default="true" id="7306fd9d-fcb3-48ca-8f44-89f7c39fe864" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +157,7 @@
       <workItem from="1675515344546" duration="350000" />
       <workItem from="1682002246575" duration="15913000" />
       <workItem from="1685166350040" duration="3753000" />
-      <workItem from="1685176775355" duration="1397000" />
+      <workItem from="1685176775355" duration="1772000" />
     </task>
     <servers />
   </component>
@@ -189,11 +180,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Lesson5_1.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/linkedlist/LinkedListTest.java</url>
           <line>5</line>
