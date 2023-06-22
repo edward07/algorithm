@@ -14,7 +14,7 @@ public class MyStack2 {
 
     public void push(int x) {
         inQueue.add(x);
-        outQueue.offer()
+        //outQueue.offer();
     }
 
     public int pop() {
