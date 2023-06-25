@@ -2,51 +2,45 @@ package queue;
 
 import java.util.PriorityQueue;
 
+/**
+ * 保存局部有序性
+ */
 public class KthLargest {
 
-    private int index;
-    private PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+    private int k;
+    private PriorityQueue<Integer> pq;
 
     public KthLargest(int k, int[] nums) {
-        index = k;
-        int length = nums.length;
-        int initLength = k > length ? length : k;
-        if (nums.length == 0) {
-            return;
-        }
-        for (int i = 0; i < initLength; i++) {
-            priorityQueue.add(nums[i]);
-        }
-        if (k <= length) {
-            for (int j = k; j < length; j++) {
-                add(nums[j]);
-            }
+        this.k = k;
+        this.pq = new PriorityQueue<>();
+        for (int i = 0; i < nums.length; i++) {
+            this.add(nums[i]);
         }
     }
 
     public int add(int val) {
-        if (priorityQueue.size() < index) {
-            priorityQueue.add(val);
-            return priorityQueue.peek();
+        if (pq.size() < k) {
+            pq.add(val);
+        } else {
+             if (pq.peek() < val) {
+                pq.poll();
+                pq.add(val);
+            }
         }
+        return pq.peek();
+    }
 
-        int min = priorityQueue.peek();
-        if (val > min) {
-            priorityQueue.poll();
-            priorityQueue.add(val);
-            min = priorityQueue.peek();
-        }
-        return min;
+    public int peek() {
+        return this.pq.peek();
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[] {};
-        KthLargest kthLargest = new KthLargest(1, arr);
-        System.out.println(kthLargest.add(-3));
-        System.out.println(kthLargest.add(-2));
-        System.out.println(kthLargest.add(-4));
-        System.out.println(kthLargest.add(0));
-        System.out.println(kthLargest.add(4));
+        KthLargest kthLargest = new KthLargest(3, new int[]{4, 5, 8, 2});
+        System.out.println(kthLargest.add(3));  // return 4
+        System.out.println(kthLargest.add(5));   // return 5
+        System.out.println(kthLargest.add(10));  // return 5
+        System.out.println(kthLargest.add(9));   // return 8
+        System.out.println(kthLargest.add(4));   // return 8
     }
 
 }
