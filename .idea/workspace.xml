@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7306fd9d-fcb3-48ca-8f44-89f7c39fe864" name="Default Changelist" comment="" />
+    <list default="true" id="7306fd9d-fcb3-48ca-8f44-89f7c39fe864" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/queue/MaxSlidingWindowV3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +68,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MyStack2">
-    <configuration name="CheckBracePair" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stack.CheckBracePair" />
+  <component name="RunManager" selected="Application.MaxSlidingWindowV3">
+    <configuration name="KthLargest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="queue.KthLargest" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stack.*" />
+          <option name="PATTERN" value="queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,25 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HasCycle02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="linkedlist.HasCycle02" />
+    <configuration name="MaxSlidingWindowV3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="queue.MaxSlidingWindowV3" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stack.MyQueue" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stack.*" />
+          <option name="PATTERN" value="queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +108,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="linkedlist.ReverseList" />
+    <configuration name="TestObserver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="design.TestObserver" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="linkedlist.*" />
+          <option name="PATTERN" value="design.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPriorityQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="queue.TestPriorityQueue" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaxSlidingWindowV3" />
+        <item itemvalue="Application.KthLargest" />
+        <item itemvalue="Application.TestObserver" />
+        <item itemvalue="Application.TestPriorityQueue" />
         <item itemvalue="Application.MyStack2" />
-        <item itemvalue="Application.MyQueue" />
-        <item itemvalue="Application.CheckBracePair" />
-        <item itemvalue="Application.HasCycle02" />
-        <item itemvalue="Application.ReverseList" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +160,11 @@
       <workItem from="1675515344546" duration="350000" />
       <workItem from="1682002246575" duration="15913000" />
       <workItem from="1685166350040" duration="3753000" />
-      <workItem from="1685176775355" duration="2157000" />
+      <workItem from="1685176775355" duration="11502000" />
+      <workItem from="1693232268945" duration="1205000" />
+      <workItem from="1694314157926" duration="5264000" />
+      <workItem from="1697097823994" duration="2742000" />
+      <workItem from="1703510127505" duration="80000" />
     </task>
     <servers />
   </component>
